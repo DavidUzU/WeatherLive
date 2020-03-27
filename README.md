@@ -10,7 +10,7 @@ The current API uses the follwing NPM packages:
 * mongoose
 * nodemon
 
-#Requirements
+# Requirements
 A local running MongoDB or a connection to an existing MongoDB
 You can install MongoDB here: 
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
