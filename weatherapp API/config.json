@@ -1,0 +1,6 @@
+{
+    "db": "mongodb://localhost/weatherlive",
+    "secret": "HVAIOT!",
+    "apikey": "b167e0517cd655cc79ff3055dd747f5a",
+    "url": "https://api.openweathermap.org/data/2.5/weather?q=city&appid=apikey"
+}
