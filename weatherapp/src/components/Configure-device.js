@@ -7,6 +7,7 @@
   import DialogTitle from '@material-ui/core/DialogTitle';
   import {NavigationBarNoSearchBar} from './Navbar';
   import { useCookies } from 'react-cookie';
+  import { useHistory } from "react-router-dom";
 
   export const ConfigureDevice = (props) => (
 
@@ -21,6 +22,7 @@
 
   function ConfigureDeviceForm(props) {
 
+    let history = useHistory();
     const [isPreviewShown, setPreviewShown] = React.useState(false);
     const [cookies] = useCookies(['token']);
 
@@ -89,7 +91,7 @@
     }).then(res => {
       if(res.status === 200){
             //AlertDialog()
-        this.props.deviceid.history.push('/dashboard');
+       history.push("/dashboard");
        // console.log(data)
      }
    }).catch(err => console.log(err));
@@ -161,7 +163,7 @@
    //      <button type="submit" onClick={handlePreview}>Preview</button>
    //    }
    //    {isPreviewShown && <AlertDialog/>}
-      
+
 function AlertDialog() {
       const [open, setOpen] = React.useState(false);
 

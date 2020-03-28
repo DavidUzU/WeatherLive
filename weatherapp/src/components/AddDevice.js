@@ -1,6 +1,7 @@
 import React from 'react'
 import {NavigationBarNoSearchBar} from './Navbar';
 import { useCookies } from 'react-cookie';
+import { useHistory } from "react-router-dom";
 
 export const AddDevice = (props) => (
 
@@ -14,6 +15,7 @@ export const AddDevice = (props) => (
 )
 
 function AddDeviceForm(props) {
+  let history = useHistory();
 
   const [cookies] = useCookies(['token']);
 
@@ -42,7 +44,7 @@ function AddDeviceForm(props) {
     }
   }).then(res => {
     if(res.status === 200){
-
+      history.push("/dashboard");
    }
  }).catch(err => console.log(err));
 
